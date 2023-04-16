@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive card</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <div class="front">
+          <span class="card-seal"></span>
+          <h1 class="numero">0000 0000 0000 0000</h1>
+          <p class="name">Jane Applesed</p>
+          <p class="dateV">
+            <span class="ano">00</span>/<span class="mes">00</span>
+          </p>
+          <img src="./assets/images/bg-card-front.png" alt="" />
+        </div>
+        <div class="back">
+          <p class="cvc-backcard">000</p>
+          <img src="./assets/images/bg-card-back.png" alt="" />
+        </div>
+      </section>
+
+      <section id="infoCard">
+        <form action="">
+          <label for="cardHolder">Cardholder name</label>
+          <input
+            id="cardHolder"
+            type="text"
+            placeholder="e.g. Jane Appleseed"
+          />
+          <label for="cardNumber">Card Number</label>
+          <input
+            id="cardNumber"
+            maxlength="16"
+            pattern="^[0-9]*$"
+            placeholder="e.g. 1234 5678 9123 0000"
+            type="text"
+          />
+          <div class="date-cvc">
+            <div class="date">
+              <label for="date">Exp. date (MM/YY)</label>
+              <div class="inputsDate">
+                <input id="dateM" maxlength="2" type="text" placeholder="MM" />
+                <input id="dateY" maxlength="2" type="text" placeholder="YY" />
+              </div>
+            </div>
+            <div class="cvc">
+              <label for="cvc">CVC</label>
+              <input
+                id="cvc"
+                type="text"
+                maxlength="3"
+                placeholder="e.g. 123"
+              />
+              <p id="erroCvc"></p>
+            </div>
+          </div>
+          <div class="button">
+            <button id="confirm">Confirm</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="thanks" class="oculto">
+        <div class="image">
+          <img src="./assets/images/icon-complete.svg" alt="" />
+        </div>
+        <div>
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+        </div>
+        <button id="continue">Confirm</button>
+      </section>
+    </main>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+}
+.card {
+  position: absolute;
+  transform: translateX(35%) translateY(25%);
+}
+.back {
+  margin: 30px 0 0 130px;
+}
+
+.date-cvc {
+  display: flex;
+}
+#dateY,
+#dateM {
+  width: 50px;
+}
+
+#dateY {
+  margin: 0 15px 0 10px;
+}
+.numero {
+  position: fixed;
+  color: white;
+  transform: translateY(135px) translateX(45px);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.name {
+  position: fixed;
+  color: white;
+  transform: translateY(197px) translateX(50px);
+}
+
+.dateV {
+  position: fixed;
+  color: white;
+  transform: translateY(200px) translateX(370px);
+}
+
+.cvc-backcard {
+  position: fixed;
+  transform: translateY(110px) translateX(360px);
+  width: 30px;
+}
+
+.card-seal {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-image: url(../images/card-logo.svg);
+  background-repeat: no-repeat;
+  transform: translateX(55%) translateY(55%);
+}
+
+#infoCard {
+  position: fixed;
+  transform: translateX(945px) translateY(265px);
+  width: 400px;
+}
+#infoCard form {
+  display: flex;
+  flex-direction: column;
+}
+#cardHolder,
+#cardNumber {
+  width: 350px;
+}
+.cvc {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+  width: 220px;
+}
+input {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid hsl(270, 3%, 76%);
+  margin: 10px 0 10px 0;
+  padding: 5px;
+}
+label {
+  margin-right: 5px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: hsl(278, 68%, 11%);
+  font-weight: bold;
+}
+
+input::placeholder {
+  font-weight: 600;
+  color: hsl(267, 7%, 77%);
+}
+
+#confirm, #continue {
+  width: 350px;
+  height: 50px;
+  margin: 10px 0px 10px 0px;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+#confirm:hover, #continue:hover {
+  cursor: pointer;
+}
+
+
+#thanks {
+  position: fixed;
+  transform: translateX(920px) translateY(300px);
+  width: 400px;
+  text-align: center;
+}
+#thanks h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+#thanks p {
+  color: rgb(151, 157, 157);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.oculto {
+  visibility: hidden;
+}
+.invalid {
+  border-color: red;
+  font-size: 0.8rem;
+  color: red;
+  margin: -5px 0 0 5px;
+}
+ 
+@media (max-width: 475px) {
+  .container {
+    flex-direction: column;
+    background-image: url(../images/bg-main-mobile.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+  }
+  .front img,
+  .back img {
+    width: 300px;
+  }
+  #cardHolder,
+  #cardNumber {
+    width: 320px;
+  }
+  .cvc {
+    width: 190px;
+  }
+  .card {
+    transform: translateX(0) translateY(0);
+    position: relative;
+  }
+  .infoCard {
+    position: absolute;
+    transform: translateX(5%) translateY(100%);
+    width: 330px;
+    margin: 25px 0 0 5px;
+  }
+
+  .front {
+    position: absolute;
+    transform: translateX(5%) translateY(70%);
+    z-index: 2;
+  }
+  .back {
+    transform: translateY(-15%) translateX(-25%);
+  }
+  .card-seal {
+    width: 75px;
+    height: 65px;
+    position: absolute;
+    background-image: url(../images/card-logo.svg);
+    background-repeat: no-repeat;
+    transform: translateX(25%) translateY(25%);
+    background-size: 50px;
+  }
+  .numero {
+    position: absolute;
+    color: white;
+    transform: translateY(250%) translateX(8%);
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  .cvc-backcard {
+    position: absolute;
+    transform: translateY(520%) translateX(1200%);
+    width: 20px;
+    z-index: 20;
+    font-size: 0.7rem;
+    color: white;
+  }
+
+  .name {
+    position: absolute;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    transform: translateY(920%) translateX(26%);
+  }
+
+  .dateV {
+    position: absolute;
+    color: white;
+    font-size: 0.7rem;
+    transform: translateY(920%) translateX(765%);
+  }
+  #confirm {
+    width: 320px;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
